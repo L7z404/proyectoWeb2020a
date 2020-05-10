@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="../css/estilos_proyecto.css" type="text/css" media="screen">
+    <script src="../javascript/valida_clientes.js"></script>
 </head>
 <body>
 <div id="contenedor">
@@ -73,49 +74,16 @@
         <div id="cuadro3" style="background-position: center"></div>
 
         <div id="contenidos">
-            <p class="contentTXT"><strong><i style="color: black">Direct Contact</i></strong></p>
-            <form action="grabar_informacion.php" method="post" id="form_contactoDir">
+            <p class="contentTXT"><strong><i style="color: black">Cliente</i></strong></p>
+            <form action="grabar_informacion.php" method="post" name="form_vendedor">
                 <fieldset>
                     <legend><strong>Formulario Cliente:</strong></legend>
-                    <i>Nombre Completo: </i><label><input type="text" name="nombre" placeholder="Nombre Apellidos" pattern="[A-Za-z]+" required></label><br><br>
-                    <i>Selecciona tu género: </i><label><input type="radio" name="sexo" value="M" required></label>Mujer
-                    <label><input type="radio" name="sexo" value="H"></label>Hombre <br><br>
-                    <i>Edad: </i>
-                    <label for="edad"></label><select name="s" id="edad" required>
-                    <option value="0" selected disabled> Selecciona Tu Edad</option>
-                    <option value="10"> 10</option>
-                    <option value="11"> 11</option>
-                    <option value="12"> 12</option>
-                    <option value="13"> 13</option>
-                    <option value="14"> 14</option>
-                    <option value="15"> 15</option>
-                    <option value="16"> 16</option>
-                    <option value="17"> 17</option>
-                    <option value="18"> 18</option>
-                    <option value="19"> 19</option>
-                    <option value="20"> 20</option>
-                    <option value="21"> 21</option>
-                    <option value="22"> 22</option>
-                    <option value="23"> 23</option>
-                    <option value="24"> 24</option>
-                    <option value="25"> 25</option>
-                    <option value="26"> 26</option>
-                    <option value="27"> 27</option>
-                    <option value="28"> 28</option>
-                    <option value="29"> 29</option>
-                    <option value="30"> 30</option>
-                </select><br><br>
+                    <i>ID: </i><label><input type="text" id="ID" value="#12345" pattern="[#0-9999]+" required></label><br><br>
+                    <i>Domicilio: </i><label><input type="text" id="nombre" placeholder="Revolución Mexicana" pattern="[A-Za-zñ]+" required></label><br><br>
+                    <i>Razón Social: </i><label><input type="text" id="ap" placeholder="Nombre Empresa" pattern="[A-Za-zñ]+" required></label><br><br>
+                    <i>RFC: </i><label><input type="text" id="am" placeholder="VECJ880326 XXX " pattern="[A-Za-zñ]+" required></label><br><br>
 
-                    <i>De qué prefieres recibir noticias: </i><br>
-                    <label><input type="checkbox" name="noticias" value="deportes">Deportes</label><br>
-                    <label><input type="checkbox" name="noticias" value="entretenimiento">Entretenimiento</label><br>
-                    <label><input type="checkbox" name="noticias" value="videojuegos">Videojuegos</label><br>
-                    <label><input type="checkbox" name="noticias" value="cine">Cine</label><br>
-                    <label><input type="checkbox" name="noticias" value="tecnologia">Tecnología</label><br>
-                    <label><input type="checkbox" name="noticias" value="seriesTV">Series de TV</label><br>
-                    <label><input type="checkbox" name="noticias" value="yes" required><strong>Estoy deacuerdo en recibir noticias</strong></label><br><br>
-
-                    <input type="submit" value=" ..:: Grabar Datos ::..">
+                    <input type="button" value=" ..:: Grabar Datos ::.." onclick="valida_clientes()">
                     <input type="reset" value=" ..:: Limpiar Datos ::..">
                 </fieldset>
             </form>
