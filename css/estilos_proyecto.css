@@ -182,9 +182,8 @@ body{
 #pie{
     color: dimgrey;
     margin-top: 10px;
-   /* background-color: blue; */
-    width: -moz-available;
-    width: available;
+    /* background-color: blue; */
+    width: 800px;
     height: fit-content;
     display: inline-block;
     text-align: center;
