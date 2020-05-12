@@ -75,13 +75,13 @@
 
         <div id="contenidos">
             <p class="contentTXT"><strong><i style="color: black">Cliente</i></strong></p>
-            <form action="grabar_informacion.php" method="post" name="form_vendedor">
+            <form action="grabar_informacion.php" method="post" name="form_cliente">
                 <fieldset>
                     <legend><strong>Formulario Cliente:</strong></legend>
                     <i>ID: </i><label><input type="text" id="ID" value="#12345" pattern="[#0-9999]+" required></label><br><br>
-                    <i>Domicilio: </i><label><input type="text" id="nombre" placeholder="Revolución Mexicana" pattern="[A-Za-zñ]+" required></label><br><br>
-                    <i>Razón Social: </i><label><input type="text" id="ap" placeholder="Nombre Empresa" pattern="[A-Za-zñ]+" required></label><br><br>
-                    <i>RFC: </i><label><input type="text" id="am" placeholder="VECJ880326 XXX " pattern="[A-Za-zñ]+" required></label><br><br>
+                    <i>Domicilio: </i><label><input type="text" id="domicilio" placeholder="Revolución Mexicana" pattern="[A-Za-zñ]+" required></label><br><br>
+                    <i>Razón Social: </i><label><input type="text" id="razonSocial" placeholder="Nombre Empresa" pattern="[A-Za-zñ]+" required></label><br><br>
+                    <i>RFC: </i><label><input type="text" id="rfc" placeholder="VECJ880326 XXX " pattern="[A-Za-zñ]+" required></label><br><br>
 
                     <input type="button" value=" ..:: Grabar Datos ::.." onclick="valida_clientes()">
                     <input type="reset" value=" ..:: Limpiar Datos ::..">
