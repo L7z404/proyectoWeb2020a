@@ -15,7 +15,7 @@
             <span></span>
             <strong>Home</strong>
         </a></div>
-        <div id="contacto" class="botones"><a class="butum" href="contact.html">
+        <div id="contacto" class="botones"><a class="butum" href="contacto_directo.html">
             <span></span>
             <span></span>
             <span></span>
@@ -57,13 +57,22 @@
             <span></span>
             <strong>Location</strong>
         </a></div>
-        <div id="contactoDirecto" class="botones"><a class="butum" href="contacto_directo.html">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <strong>Form</strong>
-        </a></div>
+        <div id="formularios" class="botones">
+            <div id="header">
+                <ul class="nav">
+                    <li><a class="butum" href="#"><span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span><strong>Forms</strong></a>
+                        <ul>
+                            <li><a href="formulario_vendedor.html" class="butum"><strong>Vendedor</strong></a></li>
+                            <li><a href="formulario_cliente.html" class="butum"><strong>Cliente</strong></a></li>
+                            <li><a href="#" class="butum"><strong>Articulos</strong></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <div id="imagen"></div>
@@ -73,47 +82,32 @@
         <div id="cuadro3" style="background-position: center"></div>
 
         <div id="contenidos">
-            <p class="contentTXT"><strong><i style="color: black">Direct Contact</i></strong></p>
+            <p class="contentTXT"><strong><i style="color: black">Articulos</i></strong></p>
             <form action="grabar_informacion.php" method="post" id="form_contactoDir">
                 <fieldset>
                     <legend><strong>Formulario Articulos:</strong></legend>
-                    <i>Nombre Completo: </i><label><input type="text" name="nombre" placeholder="Nombre Apellidos" pattern="[A-Za-z]+" required></label><br><br>
-                    <i>Selecciona tu género: </i><label><input type="radio" name="sexo" value="M" required></label>Mujer
-                    <label><input type="radio" name="sexo" value="H"></label>Hombre <br><br>
-                    <i>Edad: </i>
+                    <i>ID: </i><label><input type="text" id="ID" value="#77777" pattern="[#0-9999]+" required></label><br><br>
+                    <i>Selecciona la marca: </i><label><input type="radio" name="sexo" value="M" required></label>OneTimeUnlimited
+                    <label><input type="radio" name="sexo" value="H"></label>ChafaMX
+                    <label><input type="radio" name="sexo" value="H"></label>Hecho en USA
+                    <label><input type="radio" name="sexo" value="H"></label>PizzaTime<br><br>
+                    <i>Precio: </i>
                     <label for="edad"></label><select name="s" id="edad" required>
-                    <option value="0" selected disabled> Selecciona Tu Edad</option>
-                    <option value="10"> 10</option>
-                    <option value="11"> 11</option>
-                    <option value="12"> 12</option>
-                    <option value="13"> 13</option>
-                    <option value="14"> 14</option>
-                    <option value="15"> 15</option>
-                    <option value="16"> 16</option>
-                    <option value="17"> 17</option>
-                    <option value="18"> 18</option>
-                    <option value="19"> 19</option>
-                    <option value="20"> 20</option>
-                    <option value="21"> 21</option>
-                    <option value="22"> 22</option>
-                    <option value="23"> 23</option>
-                    <option value="24"> 24</option>
-                    <option value="25"> 25</option>
-                    <option value="26"> 26</option>
-                    <option value="27"> 27</option>
-                    <option value="28"> 28</option>
-                    <option value="29"> 29</option>
-                    <option value="30"> 30</option>
-                </select><br><br>
+                        <option value="0" selected disabled> Selecionar Precio</option>
+                        <option value="100"> $100.99mxn</option>
+                        <option value="200"> $200.95mxn</option>
+                        <option value="300"> $300.50usd</option>
+                        <option value="400"> $400.55usd</option>
+                        <option value="500"> $500.69mxn</option>
+                    </select><br><br>
 
-                    <i>De qué prefieres recibir noticias: </i><br>
-                    <label><input type="checkbox" name="noticias" value="deportes">Deportes</label><br>
-                    <label><input type="checkbox" name="noticias" value="entretenimiento">Entretenimiento</label><br>
-                    <label><input type="checkbox" name="noticias" value="videojuegos">Videojuegos</label><br>
-                    <label><input type="checkbox" name="noticias" value="cine">Cine</label><br>
-                    <label><input type="checkbox" name="noticias" value="tecnologia">Tecnología</label><br>
-                    <label><input type="checkbox" name="noticias" value="seriesTV">Series de TV</label><br>
-                    <label><input type="checkbox" name="noticias" value="yes" required><strong>Estoy deacuerdo en recibir noticias</strong></label><br><br>
+                    <i>Articulo: </i><br>
+                    <label><input type="checkbox" name="articulo" value="camisa">Camisa</label><br>
+                    <label><input type="checkbox" name="articulo" value="reloj">Reloj</label><br>
+                    <label><input type="checkbox" name="articulo" value="videojuego">Videojuego</label><br>
+                    <label><input type="checkbox" name="articulo" value="metalGear">Coleccionable Edición Especial MGS</label><br>
+                    <label><input type="checkbox" name="articulo" value="comic">Comic Metal Gear</label><br>
+                    <label><input type="checkbox" name="articulo" value="yes" required><strong>He elegido el articulo correcto</strong></label><br><br>
 
                     <input type="submit" value=" ..:: Grabar Datos ::..">
                     <input type="reset" value=" ..:: Limpiar Datos ::..">

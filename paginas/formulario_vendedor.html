@@ -16,7 +16,7 @@
             <span></span>
             <strong>Home</strong>
         </a></div>
-        <div id="contacto" class="botones"><a class="butum" href="contact.html">
+        <div id="contacto" class="botones"><a class="butum" href="contacto_directo.html">
             <span></span>
             <span></span>
             <span></span>
@@ -58,13 +58,22 @@
             <span></span>
             <strong>Location</strong>
         </a></div>
-        <div id="contactoDirecto" class="botones"><a class="butum" href="contacto_directo.html">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <strong>Form</strong>
-        </a></div>
+        <div id="formularios" class="botones">
+            <div id="header">
+                <ul class="nav">
+                    <li><a class="butum" href="#"><span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span><strong>Forms</strong></a>
+                        <ul>
+                            <li><a href="#" class="butum"><strong>Vendedor</strong></a></li>
+                            <li><a href="formulario_cliente.html" class="butum"><strong>Cliente</strong></a></li>
+                            <li><a href="formulario_articulos.html" class="butum"><strong>Articulos</strong></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <div id="imagen"></div>
@@ -78,13 +87,14 @@
             <form action="grabar_informacion.php" method="post" name="form_vendedor">
                 <fieldset>
                     <legend><strong>Formulario Vendedor:</strong></legend>
+                    <i>ID: </i><label><input type="text" id="ID" value="#55555" pattern="[#0-9999]+" required></label><br><br>
                     <i>Nombre: </i><label><input type="text" id="nombre" placeholder="Leonel" pattern="[A-Za-zñ]+" required></label><br><br>
                     <i>Apellido Paterno: </i><label><input type="text" id="ap" placeholder="Castillo" pattern="[A-Za-zñ]+" required></label><br><br>
                     <i>Apellido Materno: </i><label><input type="text" id="am" placeholder="Castañeda" pattern="[A-Za-zñ]+" required></label><br><br>
                     <i>Selecciona tu género: </i><label><input type="radio" name="sexo" value="M" required></label>Mujer
                     <label><input type="radio" name="sexo" value="H"></label>Hombre <br><br>
                     <i>Edad: </i><label><input type="number" id="edad" placeholder="18,20,21" required></label><br><br>
-                    <i>ID: </i><label><input type="text" id="ID" value="#12345" pattern="[#0-9999]+" required></label><br><br>
+
 
                     <i>Fecha de Contratación: </i><label><input type="date" name="fecha_contrato" required></label><br><br>
 
