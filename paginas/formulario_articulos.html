@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="../css/estilos_proyecto.css" type="text/css" media="screen">
+    <script src="../javascript/valida_articulos.js"></script>
 </head>
 <body>
 <div id="contenedor">
@@ -83,16 +84,16 @@
 
         <div id="contenidos">
             <p class="contentTXT"><strong><i style="color: black">Articulos</i></strong></p>
-            <form action="grabar_informacion.php" method="post" id="form_contactoDir">
+            <form action="grabar_informacion.php" method="post" name="form_articulos">
                 <fieldset>
                     <legend><strong>Formulario Articulos:</strong></legend>
                     <i>ID: </i><label><input type="text" id="ID" value="#77777" pattern="[#0-9999]+" required></label><br><br>
-                    <i>Selecciona la marca: </i><label><input type="radio" name="sexo" value="M" required></label>OneTimeUnlimited
-                    <label><input type="radio" name="sexo" value="H"></label>ChafaMX
-                    <label><input type="radio" name="sexo" value="H"></label>Hecho en USA
-                    <label><input type="radio" name="sexo" value="H"></label>PizzaTime<br><br>
+                    <i>Selecciona la marca: </i><label><input type="radio" name="marca" value="M" required></label>OneTimeUnlimited
+                    <label><input type="radio" name="marca" value="H"></label>ChafaMX
+                    <label><input type="radio" name="marca" value="H"></label>Hecho en USA
+                    <label><input type="radio" name="marca" value="H"></label>PizzaTime<br><br>
                     <i>Precio: </i>
-                    <label for="edad"></label><select name="s" id="edad" required>
+                    <label for="precio"></label><select name="s" id="precio" required>
                         <option value="0" selected disabled> Selecionar Precio</option>
                         <option value="100"> $100.99mxn</option>
                         <option value="200"> $200.95mxn</option>
@@ -107,9 +108,9 @@
                     <label><input type="checkbox" name="articulo" value="videojuego">Videojuego</label><br>
                     <label><input type="checkbox" name="articulo" value="metalGear">Coleccionable Edición Especial MGS</label><br>
                     <label><input type="checkbox" name="articulo" value="comic">Comic Metal Gear</label><br>
-                    <label><input type="checkbox" name="articulo" value="yes" required><strong>He elegido el articulo correcto</strong></label><br><br>
+                    <label><input type="checkbox" id="articulo" value="yes" required><strong>He elegido el articulo correcto</strong></label><br><br>
 
-                    <input type="submit" value=" ..:: Grabar Datos ::..">
+                    <input type="button" value=" ..:: Grabar Datos ::.." onclick="valida_articulo()">
                     <input type="reset" value=" ..:: Limpiar Datos ::..">
                 </fieldset>
             </form>
