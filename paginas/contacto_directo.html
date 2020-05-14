@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Title</title>
         <link rel="stylesheet" href="../css/estilos_proyecto.css" type="text/css" media="screen">
+        <script src="../javascript/valida_contacto_directo.js"></script>
     </head>
     <body>
         <div id="contenedor">
@@ -83,14 +84,15 @@
 
                 <div id="contenidos">
                     <p class="contentTXT"><strong><i style="color: black">Direct Contact</i></strong></p>
-                    <form action="grabar_informacion.php" method="post" id="form_contactoDir">
+                    <form action="grabar_informacion.php" method="post" id="form_contactoDir" name="form_contactoDir">
                         <fieldset>
                             <legend><strong>Formulario:</strong></legend>
-                            <i>Nombre Completo: </i><label><input type="text" name="nombre" placeholder="Nombre Apellidos" pattern="[A-Za-z]+" required></label><br><br>
-                            <i>Selecciona tu género: </i><label><input type="radio" name="sexo" value="M" required></label>Mujer
-                            <label><input type="radio" name="sexo" value="H"></label>Hombre <br><br>
+                            <i>Nombre Completo: </i>
+                            <input type="text" id="nombre" placeholder="Nombre Apellidos"><br><br>
+                            <i>Selecciona tu género: </i><input name="sexo" type="radio" value="M" required>Mujer
+                            <input type="radio" name="sexo" value="H">Hombre <br><br>
                             <i>Edad: </i>
-                            <label for="edad"></label><select name="s" id="edad" required>
+                            <select id="edad">
                                 <option value="0" selected disabled> Selecciona Tu Edad</option>
                                 <option value="10"> 10</option>
                                 <option value="11"> 11</option>
@@ -116,15 +118,15 @@
                             </select><br><br>
 
                             <i>De qué prefieres recibir noticias: </i><br>
-                            <label><input type="checkbox" name="noticias" value="deportes">Deportes</label><br>
-                            <label><input type="checkbox" name="noticias" value="entretenimiento">Entretenimiento</label><br>
-                            <label><input type="checkbox" name="noticias" value="videojuegos">Videojuegos</label><br>
-                            <label><input type="checkbox" name="noticias" value="cine">Cine</label><br>
-                            <label><input type="checkbox" name="noticias" value="tecnologia">Tecnología</label><br>
-                            <label><input type="checkbox" name="noticias" value="seriesTV">Series de TV</label><br>
-                            <label><input type="checkbox" name="noticias" value="yes" required><strong>Estoy deacuerdo en recibir noticias</strong></label><br><br>
+                            <input type="checkbox" name="noticias" id="noticias" value="deportes">Deportes<br>
+                            <input type="checkbox" name="noticias" value="entretenimiento">Entretenimiento<br>
+                            <input type="checkbox" name="noticias" value="videojuegos">Videojuegos<br>
+                            <input type="checkbox" name="noticias" value="cine">Cine<br>
+                            <input type="checkbox" name="noticias" value="tecnologia">Tecnología<br>
+                            <input type="checkbox" name="noticias" value="seriesTV">Series de TV<br>
+                            <input type="checkbox" name="noticias" value="yes" required><strong>Estoy deacuerdo en recibir noticias</strong><br><br>
 
-                            <input type="submit" value=" ..:: Grabar Datos ::..">
+                            <input type="button" value=" ..:: Grabar Datos ::.." onclick="ValidaContactoDir()">
                             <input type="reset" value=" ..:: Limpiar Datos ::..">
                         </fieldset>
                     </form>
