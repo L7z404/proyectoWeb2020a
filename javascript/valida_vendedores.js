@@ -1,37 +1,50 @@
 function valida_vendedor() {
-    var edad = document.getElementById("edad").value;
+    var id = document.getElementById("ID").value;
     var nombre = document.getElementById("nombre").value;
     var ap = document.getElementById("ap").value;
     var am = document.getElementById("am").value;
+    var radiosSexo = document.getElementsByName("sexo");
+    var edad = document.getElementById("edad").value;
+    var dia = document.getElementById("dia").selectedIndex;
+    var mes = document.getElementById("mes").selectedIndex;
+    var anio = document.getElementById("year").selectedIndex;
 
 
-    if (edad<18){
-        if (edad<=0){
-            alert("Por favor eliga una edad valida")
-        }else {
-            alert("Debes ser mayor de 17 años para llenar este formulario")
-        }
-    } else if (!document.querySelector('input[name="sexo"]:checked')){
-        alert("Por favor elige un genero")
-    }else if(document.forms["form_vendedor"]["fecha_contrato"].value === "" || document.forms["form_vendedor"]["fecha_contrato"].value === "1970-01-01"){
-        alert("Por favor eliga una fecha")
-    }
-    else if (nombre_valido(nombre,ap,am)!==false){
-        document.form_vendedor.submit();
-    }
-}
-
-function nombre_valido(nombre,ap,am) {
-    if (nombre.length < 3 || ap.length < 3 || am.length < 3){
-        if (nombre.length === 0 || ap.length === 0 || am.length === 0){
-            alert("Por favor ingrese los datos de su nombre")
-            return false;
-        } else{
-            alert("Por favor ingrese nombres completos")
-            return false;
+    var seleccionado = false;
+    for (var i=0; i<radiosSexo.length; i++){
+        if (radiosSexo[i].checked){
+            seleccionado=true;
+            break;
         }
     }
-    else{
-        return true;
+
+    if (id==null || id===0 || id.length===0 || !/^([0-9])*$/.test(id)){
+        alert("Debes escribir un ID valido");
+        document.getElementById("ID").focus();
+    }else if(nombre==null || nombre.length===0 || /^\s+$/.test(nombre)){
+        alert("Debes escribir tu nombre completo");
+        document.getElementById("nombre").focus();
+    }else if (ap==null || ap.length===0 || /^\s+$/.test(ap)){
+        alert("Debes escribir tu apellido paterno completo");
+        document.getElementById("ap").focus();
+    }else if (am==null || am.length===0 || /^\s+$/.test(am)){
+        alert("Debes escribir tu apellido materno completo");
+        document.getElementById("am").focus();
+    }else if (!seleccionado){
+        alert("Debes elegir un genero");
+    }else if (edad==null || edad===0 || edad.length===0 || !/^([0-9])*$/.test(edad)){
+        alert("Debes escribir tu edad");
+    }else if (dia==null || dia===0) {
+        alert("Debes elegir un dia");
+        document.getElementById("dia").focus();
+        return false;
+    }else if (mes==null || mes===0) {
+        alert("Debes elegir un mes");
+        document.getElementById("mes").focus();
+        return false;
+    }else if (anio==null || anio===0){
+        alert("Debes elegir un año");
+        document.getElementById("year").focus();
+        return false;
     }
 }

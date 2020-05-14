@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Form Vendedor</title>
     <link rel="stylesheet" href="../css/estilos_proyecto.css" type="text/css" media="screen">
     <script src="../javascript/valida_vendedores.js"></script>
 </head>
@@ -87,16 +87,84 @@
             <form action="grabar_informacion.php" method="post" name="form_vendedor">
                 <fieldset>
                     <legend><strong>Formulario Vendedor:</strong></legend>
-                    <i>ID: </i><label><input type="text" id="ID" value="#55555" pattern="[#0-9999]+" required></label><br><br>
-                    <i>Nombre: </i><label><input type="text" id="nombre" placeholder="Leonel" pattern="[A-Za-zñ]+" required></label><br><br>
-                    <i>Apellido Paterno: </i><label><input type="text" id="ap" placeholder="Castillo" pattern="[A-Za-zñ]+" required></label><br><br>
-                    <i>Apellido Materno: </i><label><input type="text" id="am" placeholder="Castañeda" pattern="[A-Za-zñ]+" required></label><br><br>
-                    <i>Selecciona tu género: </i><label><input type="radio" name="sexo" value="M" required></label>Mujer
-                    <label><input type="radio" name="sexo" value="H"></label>Hombre <br><br>
-                    <i>Edad: </i><label><input type="number" id="edad" placeholder="18,20,21" required></label><br><br>
+                    <i>ID: </i><input type="text" id="ID" placeholder="#55555" pattern="[#0-9999]+" required><br><br>
+                    <i>Nombre: </i><input type="text" id="nombre" placeholder="Leonel"><br><br>
+                    <i>Apellido Paterno: </i><input type="text" id="ap" placeholder="Castillo"><br><br>
+                    <i>Apellido Materno: </i><input type="text" id="am" placeholder="Castañeda"><br><br>
+                    <i>Selecciona tu género: </i><input type="radio" name="sexo" value="M">Mujer
+                    <input type="radio" name="sexo" value="H">Hombre <br><br>
+                    <i>Edad: </i><input type="number" id="edad" placeholder="18,20,21"><br><br>
 
+                    <!-- Fecha: D/M/A -->
+                    Fecha de Contratación: <br>
+                    <i>d:</i>
+                    <select id="dia">
+                        <option value="0" selected disabled>Selecciona el día...</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
 
-                    <i>Fecha de Contratación: </i><label><input type="date" name="fecha_contrato" required></label><br><br>
+                    <i>m:</i>
+                    <select id="mes">
+                        <option value="0" selected disabled>Selecciona el mes...</option>
+                        <option value="1">Enero</option>
+                        <option value="2">Febrero</option>
+                        <option value="3">Marzo</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Mayo</option>
+                        <option value="6">Junio</option>
+                        <option value="7">Julio</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Septiembre</option>
+                        <option value="10">Octubre</option>
+                        <option value="11">Noviembre</option>
+                        <option value="12">Diciembre</option>
+                    </select>
+
+                    <i>a:</i>
+                    <select id="year">
+                        <option value="0" selected disabled>Selecciona el año...</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                    </select><br><br>
 
                     <input type="button" value=" ..:: Grabar Datos ::.." onclick="valida_vendedor()">
                     <input type="reset" value=" ..:: Limpiar Datos ::..">
