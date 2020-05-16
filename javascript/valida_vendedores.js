@@ -37,14 +37,13 @@ function valida_vendedor() {
     }else if (dia==null || dia===0) {
         alert("Debes elegir un dia");
         document.getElementById("dia").focus();
-        return false;
     }else if (mes==null || mes===0) {
         alert("Debes elegir un mes");
         document.getElementById("mes").focus();
-        return false;
     }else if (anio==null || anio===0){
         alert("Debes elegir un año");
         document.getElementById("year").focus();
-        return false;
+    }else{
+        document.form_vendedor.submit();
     }
 }

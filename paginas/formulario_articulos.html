@@ -87,13 +87,13 @@
             <form action="grabar_informacion.php" method="post" name="form_articulos">
                 <fieldset>
                     <legend><strong>Formulario Articulos:</strong></legend>
-                    <i>ID: </i><label><input type="text" id="ID" value="#77777" pattern="[#0-9999]+" required></label><br><br>
-                    <i>Selecciona la marca: </i><label><input type="radio" name="marca" value="M" required></label>OneTimeUnlimited
-                    <label><input type="radio" name="marca" value="H"></label>ChafaMX
-                    <label><input type="radio" name="marca" value="H"></label>Hecho en USA
-                    <label><input type="radio" name="marca" value="H"></label>PizzaTime<br><br>
+                    <i>ID: </i><input type="text" id="ID" placeholder="#77777" pattern="[#0-9999]+" required><br><br>
+                    <i>Selecciona la marca: </i><input type="radio" name="marca" value="M" required>OneTimeUnlimited
+                    <input type="radio" name="marca" value="H">ChafaMX
+                    <input type="radio" name="marca" value="H">Hecho en USA
+                    <input type="radio" name="marca" value="H">PizzaTime<br><br>
                     <i>Precio: </i>
-                    <label for="precio"></label><select name="s" id="precio" required>
+                    <select name="s" id="precio" required>
                         <option value="0" selected disabled> Selecionar Precio</option>
                         <option value="100"> $100.99mxn</option>
                         <option value="200"> $200.95mxn</option>
@@ -103,12 +103,11 @@
                     </select><br><br>
 
                     <i>Articulo: </i><br>
-                    <label><input type="checkbox" name="articulo" value="camisa">Camisa</label><br>
-                    <label><input type="checkbox" name="articulo" value="reloj">Reloj</label><br>
-                    <label><input type="checkbox" name="articulo" value="videojuego">Videojuego</label><br>
-                    <label><input type="checkbox" name="articulo" value="metalGear">Coleccionable Edición Especial MGS</label><br>
-                    <label><input type="checkbox" name="articulo" value="comic">Comic Metal Gear</label><br>
-                    <label><input type="checkbox" id="articulo" value="yes" required><strong>He elegido el articulo correcto</strong></label><br><br>
+                    <input type="checkbox" name="articulo" value="camisa">Camisa<br>
+                    <input type="checkbox" name="articulo" value="reloj">Reloj<br>
+                    <input type="checkbox" name="articulo" value="videojuego">Videojuego<br>
+                    <input type="checkbox" name="articulo" value="metalGear">Coleccionable Edición Especial MGS<br>
+                    <input type="checkbox" name="articulo" value="comic">Comic Metal Gear<br><br>
 
                     <input type="button" value=" ..:: Grabar Datos ::.." onclick="valida_articulo()">
                     <input type="reset" value=" ..:: Limpiar Datos ::..">
